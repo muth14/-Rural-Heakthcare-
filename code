@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+
+        header {
+            background: linear-gradient(90deg, #2563eb, #1e3a8a);
+            color: white;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            position: relative;
+        }
+
+        .chatbot-container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .chatbot-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .chatbot-container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2563eb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #1f2937;
+            color: #d1d5db;
+        }
+
+        footer a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        df-messenger {
+            z-index: 1;
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: Google Sans;
+            --df-messenger-chat-background: #f3f6fc;
+            --df-messenger-message-user-background: #d3e3fd;
+            --df-messenger-message-bot-background: #fff;
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            height: 600px;
+        }
+    </style>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>MediCare Chatbot</h1>
+</header>
+
+<main>
+    <div class="chatbot-container">
+        <h2>Talk to Our Virtual Health Assistant</h2>
+        <df-messenger
+          project-id="titanium-web-441916-b4"
+          agent-id="b4b7cb8b-9a1c-4a60-b5f4-6596c500fd9a"
+          language-code="en"
+          max-query-length="-1">
+          <df-messenger-chat-bubble
+           chat-title="theruralhealthcarebot">
+          </df-messenger-chat-bubble>
+        </df-messenger>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 MediCare. All rights reserved. | <a href="#">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
